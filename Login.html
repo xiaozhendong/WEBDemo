@@ -1,0 +1,143 @@
+﻿<!DOCTYPE>
+<html>
+<!--width 属性控制设备的宽度。假设您的网站将被带有不同屏幕分辨率的设备浏览，那么将它设置为 device-width 可以确保它能正确呈现在不同设备上。
+initial-scale=1.0 确保网页加载时，以 1:1 的比例呈现，不会有任何的缩放-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Login</title>
+    <META charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/Login.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Jump.css">
+</head>
+<body>
+
+
+<div id="div-cl">
+    <a id="circle" href="http://www.dlnu.edu.cn/new/index.htm">
+        <img id="circle1" src="img/DLNU.jpg" class="img-circle" alt="大连民族大学官网">
+    </a>
+    <h1 class="DLNU">大连民族大学实验室管理系统</h1>
+</div>
+
+
+<!--<img src="img/DLNU.jpg" id="circle" >-->
+
+    <div class="cn_gobuy">
+        <!-- <div class="search_y"><a href="https://www.baidu.com/"><img src="image/search_y.png" alt=""/></a></div>-->
+        <div class="biankuang biankuang_1"></div>
+        <div class="biankuang biankuang_2"></div>
+        <div class="biankuang biankuang_3"></div>
+        <div class="biankuang biankuang_4"></div>
+        <a class="tp_gobuy" href="https://www.baidu.com/"><img class="picturesize" src="" alt="" title=""></a>
+
+        <a class="top_text" href="#">实验室设备介绍</a>
+        <!--   <div class="text_gobuy">
+
+
+               <div class="a_add_divboc">
+
+               </div>
+           </div>-->
+    </div>
+<div class="cn_gobuy1">
+    <!-- <div class="search_y"><a href="https://www.baidu.com/"><img src="image/search_y.png" alt=""/></a></div>-->
+    <div class="biankuang biankuang_1"></div>
+    <div class="biankuang biankuang_2"></div>
+    <div class="biankuang biankuang_3"></div>
+    <div class="biankuang biankuang_4"></div>
+    <a class="tp_gobuy" href="https://www.baidu.com/"><img class="picturesize" src="" alt="" title=""></a>
+
+    <a class="top_text" href="#">实验室设备介绍</a>
+    <!--   <div class="text_gobuy">
+
+
+           <div class="a_add_divboc">
+
+           </div>
+       </div>-->
+</div>
+
+
+<div id='container2' onclick="Sonmousedown()">
+    <!--<div id='container1'>
+    </div>
+
+    <div id='container4'>
+      &lt;!&ndash;  <div id="circle"  style="background-image:url('img/DLNU.jpg');" ></div>&ndash;&gt;
+
+    </div>
+
+    <div id='container3'>
+    </div>-->
+</div>
+
+<div id='container'>
+    <canvas id="canvas">
+        您的浏览器不支持canvas
+    </canvas>
+    <!--<span id="blue" onClick="blue()"></span>
+    <span id="purple" onClick="purple()"></span>
+    <span id="black" onClick="black()"></span>-->
+</div>
+
+<script src="js/Login.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/jquery.js"></script>
+<script>
+    $(function () {
+//        边框效果--移入
+        function biankuang() {
+            $('.biankuang_1').stop(true).animate({
+                height: '100px'
+            }, 300)
+            $('.biankuang_2').stop(true).delay(300).animate({
+                width: '140px'
+            }, 300)
+            $('.biankuang_3').stop(true).animate({
+                height: '100px'
+            }, 300)
+            $('.biankuang_4').stop(true).delay(300).animate({
+                width: '140px'
+            }, 300)
+        }
+
+//        边框效果--移出
+        function biankuang1() {
+
+            $('.biankuang_1').stop(true).delay(100).animate({
+                height: '0px'
+            }, 100)
+            $('.biankuang_2').stop(true).animate({
+                width: '0px'
+            }, 100)
+            $('.biankuang_3').stop(true).delay(100).animate({
+                height: '0px'
+            }, 100)
+            $('.biankuang_4').stop(true).animate({
+                width: '0px'
+            }, 100)
+        }
+
+//        触发
+
+        $('.cn_gobuy').hover(
+                function () {
+                    $('.text_gobuy').addClass('text_gobuy_show');
+                    $('.search_y').animate({left: '150', opacity: 1}, 300);
+                    biankuang();
+                },
+                function () {
+                    $('.text_gobuy').removeClass('text_gobuy_show');
+                    $('.search_y').animate({left: '100', opacity: 0}, 300);
+                    biankuang1();
+                }
+        );
+
+    })
+
+</script>
+</body>
+</html>
